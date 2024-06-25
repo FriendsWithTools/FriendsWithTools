@@ -13,7 +13,7 @@ const ConvoListItem = () => {
 
   return (
     <>
-      <Link href='/inbox/chat'>
+      <Link href='/chat'>
         <div className='flex row-span-1 row py-[1.25rem] px-[1rem]  border rounded border-solid border-zinc-400 items-center justify-center mb-1'>
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -26,7 +26,7 @@ const ConvoListItem = () => {
           <div className='last-msg-time text-xs text-slate-400 p-2 text-center ml-12'>12:30pm</div>
         </div>
       </Link>
-      <Link href='/inbox/chat'>
+      <Link href='/chat'>
         <div className='flex row-span-1 row py-[1.25rem] px-[1rem]  border rounded border-solid border-zinc-400 items-center justify-center mb-1' >
           <Avatar>
             <AvatarImage src="https://picsum.photos/100" alt="@shadcn" />
@@ -39,7 +39,7 @@ const ConvoListItem = () => {
           <div className='last-msg-time text-xs text-slate-400 p-2 text-center ml-12'>12:45pm</div>
         </div>
       </Link>
-      <Link href='/inbox/chat'>
+      <Link href='/chat'>
         <div className='flex row-span-1 row py-[1.25rem] px-[1rem]  border rounded border-solid border-zinc-400 items-center justify-center mb-1' >
           <Avatar>
             <AvatarImage src="https://picsum.photos/123" alt="@shadcn" />

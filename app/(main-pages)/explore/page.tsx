@@ -1,7 +1,6 @@
 // pages/tools.tsx
 import React from 'react';
 import Link from 'next/link';
-import NavBar from '../components/NavBar';
 
 interface Tool {
   id: string;
