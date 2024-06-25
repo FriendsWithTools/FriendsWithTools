@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
 import NavBar from '../../components/NavBar';
 import { ScrollArea } from "@/components/ui/scroll-area"
 import ConvoListItem from '../../components/ConvoListItem';
