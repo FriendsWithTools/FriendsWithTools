@@ -8,7 +8,7 @@ const InboxPage = () => {
 
     return (
         <div>
-            <div className=' flex items-center justify-center inset-x-0 top-0 border-t  border-grey h-20 shadow-md'>
+            <div className=' flex items-center justify-center inset-x-0 top-0 border-t  border-grey h-20 shadow-md mb-1 bg-[#189c8c] '>
             <h1 className='text-center text-xl font-bold'>Messages</h1>
             </div>
             <ScrollArea className="h-[670px] w-[100%] p-1">
@@ -16,7 +16,6 @@ const InboxPage = () => {
                 {/*Here map all conversations for user, create a conversation box view for each one, 
                     they should be clickable and navigate to chat view for each (drawer component coming in form the right side)*/}
             </ScrollArea>
-            <NavBar />
         </div>
     );
 }

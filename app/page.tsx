@@ -9,30 +9,7 @@ export default function Home() {
       <div>
         <SearchBar />
       </div>
-      <h1>Homepage</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link href='/explore'>Explore</Link>
-          </li>
-          <li>
-            <Link href='/inbox'>Inbox</Link>
-          </li>
-          <li>
-            <Link href='/rented'>Rented</Link>
-          </li>
-          <li>
-            <Link href='/user'>User Profile</Link>
-          </li>
-          <li>
-            <Link href='/wishlist'>Wishlist</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <div>
-        <NavBar />
-      </div>
+      <h1>Explore Page</h1>
     </main>
   );
 }

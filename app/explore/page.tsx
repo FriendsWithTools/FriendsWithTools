@@ -31,9 +31,6 @@ const ToolsPage = () => {
           </li>
         ))}
       </ul>
-      <div>
-        <NavBar />
-      </div>
     </div>
   );
 };

@@ -5,7 +5,6 @@ const RentedPage = () => {
   return (
     <div>
       <h1>Rented Tools</h1>
-      <NavBar />
     </div>
   );
 };
