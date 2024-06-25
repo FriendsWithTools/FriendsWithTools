@@ -32,8 +32,8 @@ model ToolCard {
   description String
   location    String
   dailyRate   Int
-  weeklyRate  Int
-  monthlyRate Int
+  weeklyRate  Int?
+  monthlyRate Int?
   picture     String?
   liked       Boolean
   available   Boolean

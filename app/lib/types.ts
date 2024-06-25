@@ -17,8 +17,8 @@ export type ToolCard = {
   description: string;
   location: string;
   dailyRate: number;
-  weeklyRate: number;
-  monthlyRate: number;
+  weeklyRate?: number;
+  monthlyRate?: number;
   picture: string;
   liked: boolean;
   available: boolean;
@@ -31,7 +31,7 @@ export type ToolCategory = {
   _id: string;
   categoryName: string;
   tools: ToolCard[];
-}
+};
 
 export type ToolsReviews = {
   _id: string;
@@ -56,4 +56,4 @@ export type Message = {
   author: User;
   conversationId: string;
   conversation: Conversation;
-}
+};
