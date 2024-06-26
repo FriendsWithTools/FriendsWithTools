@@ -16,7 +16,7 @@ const NavBar = () => {
   const currentPath = usePathname();
 
   return (
-    <div className=' fixed inset-x-0 bottom-0 border-t  border-grey h-20 shadow-md'>
+    <div className=' fixed bg-white inset-x-0 bottom-0 border-t  border-grey h-20 shadow-md'>
       <div className='flex justify-around items-center h-full p-4'>
         <Link href='/explore'>
           <MagnifyingGlassIcon

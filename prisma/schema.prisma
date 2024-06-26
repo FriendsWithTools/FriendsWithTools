@@ -17,7 +17,7 @@ model User {
   id             String         @id @default(uuid())
   name           String
   lastName       String
-  email          String         @unique
+  email          String         
   password       String
   profilePicture String
   conversations  Conversation[]
@@ -48,7 +48,7 @@ model ToolCard {
 
 model ToolCategory {
   id           String     @id @default(uuid())
-  categoryName String     @unique
+  categoryName String?    
   tools        ToolCard[]
 }
 
