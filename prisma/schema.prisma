@@ -38,8 +38,10 @@ model ToolCard {
   picture     String?
   liked       Boolean
   available   Boolean
-  reviews     ToolsReviews[]
+  reviews     ToolsReviews[] 
   toolrequests    ToolRequest[]
+  active        Boolean        @default(true)
+
 
   ownerId        String
   owner          User         @relation(fields: [ownerId], references: [id])

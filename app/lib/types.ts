@@ -29,6 +29,7 @@ export type ToolCard = {
   ownerId: string;
   toolCategoryId: string;
   toolrequests: ToolRequest[];
+  active: boolean;
 };
 
 export type ToolCategory = {

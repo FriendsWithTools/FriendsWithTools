@@ -64,7 +64,8 @@ async function main() {
       reviews: [],
       ownerId: users[0].id,
       toolCategoryId: toolCategories[0].id,
-      toolrequests: []
+      toolrequests: [],
+      active: true
     },
     {
       id: uuidv4(),
@@ -80,7 +81,8 @@ async function main() {
       reviews: [],
       ownerId: users[1].id,
       toolCategoryId: toolCategories[1].id,
-      toolrequests: []
+      toolrequests: [],
+      active: true
     }
   ];
 
@@ -216,6 +218,7 @@ async function main() {
         available: tool.available,
         ownerId: tool.ownerId,
         toolCategoryId: tool.toolCategoryId,
+        active: tool.active,
         reviews: {
           createMany: {
             data: tool.reviews.map(review => ({

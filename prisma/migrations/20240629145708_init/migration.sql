@@ -22,6 +22,7 @@ CREATE TABLE "ToolCard" (
     "picture" TEXT,
     "liked" BOOLEAN NOT NULL,
     "available" BOOLEAN NOT NULL,
+    "active" BOOLEAN NOT NULL DEFAULT true,
     "ownerId" TEXT NOT NULL,
     "toolCategoryId" TEXT NOT NULL,
 

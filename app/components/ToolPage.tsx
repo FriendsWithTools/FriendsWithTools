@@ -76,8 +76,8 @@ const ToolCardComponent = ({ tool }: ToolCardProps) => {
         },
         body: JSON.stringify({
           toolId: tool.id,
-          userId: '64243b6a-2c1b-4277-b77f-0cf29fe39109', // Replace with the actual user ID
-          status: 'accepted',
+          userId: '459911db-39f7-4838-a4b6-bd41c3ee93b9', // Replace with the actual user ID
+          status: 'pending',
         }),
       });
 
