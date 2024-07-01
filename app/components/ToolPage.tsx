@@ -1,14 +1,13 @@
 import React from 'react';
-import { ToolCard as ToolType} from '../lib/types';
-import Liked from './Liked';
+import { ToolCard } from '../lib/types';
 
 export interface ToolCardProps {
-  tool: ToolType;
+  tool: ToolCard;
 }
 
 const ToolCardComponent = ({ tool }: ToolCardProps) => {
   const defaultImage = 'https://shorturl.at/PyeKu'; 
-  const testUserId = process.env.HARDCODED_ID
+  const testUserId = process.env.HARDCODED_ID;
   const handleRentClick = async () => {
     try {
       const response = await fetch('/api/myRequests', {
@@ -18,7 +17,7 @@ const ToolCardComponent = ({ tool }: ToolCardProps) => {
         },
         body: JSON.stringify({
           toolId: tool.id,
-          userId: '459911db-39f7-4838-a4b6-bd41c3ee93b9', // Replace with the actual user ID
+          userId: '391442ac-518b-4d4e-a089-e53871ad22b4', // Replace with the actual user ID
           status: 'pending',
         }),
       });
@@ -35,11 +34,9 @@ const ToolCardComponent = ({ tool }: ToolCardProps) => {
 
   return (
     <div className="border-slate-50 border-4 p-4 rounded-xl shadow-md flex flex-col items-center m-4">
-      {/* Photo with Like button */}
-      <div className="relative w-full h-64 rounded-m overflow-hidden bg-cover bg-center"
+      <div className="testingDivName relative w-full h-64 rounded-m overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url(${tool.picture || defaultImage})` }}>
         <div className="absolute top-0 right-0 m-2">
-          <Liked />
         </div>
       </div>
 

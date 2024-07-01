@@ -33,7 +33,7 @@ const ReceivedRequests = ({ requests }: { requests: RequestType[] }) => {
 
   const handleUpdateStatus = async (requestId: string, status: string) => {
     try {
-      const response = await fetch(`/api/requests/${requestId}`, {
+      const response = await fetch(`/api/myRequests/${requestId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

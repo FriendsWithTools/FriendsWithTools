@@ -24,16 +24,17 @@ const Form = () => {
     picture: '', // Added for picture state
     liked: false,
     available: true,
-    ownerId: '459911db-39f7-4838-a4b6-bd41c3ee93b9', // Replace with the actual user ID
+    ownerId: '391442ac-518b-4d4e-a089-e53871ad22b4', // Replace with the actual user ID
     id: uuidv4(),
     reviews: [],
     toolCategoryId: '',
     toolrequests: [],
+    wishlists: [],
     active: true
 
   });
   const [categories, setCategories] = useState<ToolCategory[]>([]);
-  const [image, setImage] = useState<File | null>(null); // State to store the selected image file
+  //const [image, setImage] = useState<File | null>(null); // State to store the selected image file
   const router= useRouter();
   useEffect(() => {
     const fetchCategory = async () => {
@@ -68,7 +69,6 @@ const Form = () => {
     }));
   };
 
-
   const handleSelectChange = (name: string, value: string) => {
     setInput((prevData) => ({ ...prevData, [name]: value }));
   };
@@ -79,9 +79,7 @@ const Form = () => {
       try {
         const storageRef = ref(storage, `files/${file.name}`);
         const uploadTask = uploadBytesResumable(storageRef, file);
-
         await uploadTask;
-
         const mediaUrl = await getDownloadURL(uploadTask.snapshot.ref);
         console.log('Firebase MediaURL', mediaUrl);
 
@@ -90,7 +88,7 @@ const Form = () => {
           picture: mediaUrl,
         }));
 
-        setImage(file); // Set the file to state for later use if needed
+        // setImage(file); // Set the file to state for later use if needed
 
       } catch (error) {
         console.error('Error uploading file:', error);
@@ -129,11 +127,12 @@ const Form = () => {
         monthlyRate: 0,
         liked: false,
         available: true,
-        ownerId: '459911db-39f7-4838-a4b6-bd41c3ee93b9', // Replace with the actual 
+        ownerId: '391442ac-518b-4d4e-a089-e53871ad22b4', // Replace with the actual 
         id: uuidv4(),
         reviews: [],
         toolCategoryId: '',
         toolrequests: [],
+        wishlists: [],
         active: true
       });
       router.push('/rented');
@@ -149,8 +148,10 @@ const Form = () => {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-12 ">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
-
         </Link>
+        {/*<Link href='/rented'>
+            <ChevronLeftIcon className='h-4 w-4' />         Use this icon as a back button everywhere in app?
+          </Link>*/}
       </header>
       <div className='flex justify-center items-center  h-200'>
 
