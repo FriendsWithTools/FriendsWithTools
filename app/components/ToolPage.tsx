@@ -17,8 +17,8 @@ const ToolCardComponent = ({ tool }: ToolCardProps) => {
         },
         body: JSON.stringify({
           toolId: tool.id,
-          userId: process.env.CURRENT_USERID, // Replace with the actual user ID
-          status: 'accepted',
+          userId: '391442ac-518b-4d4e-a089-e53871ad22b4', // Replace with the actual user ID
+          status: 'pending',
         }),
       });
 
@@ -78,4 +78,4 @@ const ToolCardComponent = ({ tool }: ToolCardProps) => {
   );
 };
 
-export default ToolPage;
+export default ToolCardComponent;

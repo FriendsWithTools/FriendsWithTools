@@ -39,6 +39,7 @@ const ToolsPage = ({
       try {
         const response = await fetch('/api/wishlist');
         const data: ToolCard[] = await response.json();
+        console.log('data', data);
 
         data.forEach((el) => {
           el.liked = true;

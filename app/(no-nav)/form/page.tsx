@@ -24,12 +24,13 @@ const Form = () => {
     picture: '', // Added for picture state
     liked: false,
     available: true,
-    ownerId: 'acaa5f19-db41-44b2-a6a9-a32e051575b8', // Replace with the actual user ID
+    ownerId: '391442ac-518b-4d4e-a089-e53871ad22b4', // Replace with the actual user ID
     id: uuidv4(),
     reviews: [],
     toolCategoryId: '',
     toolrequests: [],
-    wishlists: []
+    wishlists: [],
+    active: true
 
   });
   const [categories, setCategories] = useState<ToolCategory[]>([]);
@@ -126,12 +127,13 @@ const Form = () => {
         monthlyRate: 0,
         liked: false,
         available: true,
-        ownerId: '438088e9-19de-45f9-8eec-9ebbce2c0678', // Replace with the actual 
+        ownerId: '391442ac-518b-4d4e-a089-e53871ad22b4', // Replace with the actual 
         id: uuidv4(),
         reviews: [],
         toolCategoryId: '',
         toolrequests: [],
-        wishlists: []
+        wishlists: [],
+        active: true
       });
       router.push('/rented');
     } catch (error) {

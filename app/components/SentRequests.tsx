@@ -1,20 +1,14 @@
-
-
 import React, { useState, useEffect } from 'react';
 import RequestToolCard from './RequestToolCard';
 import { ToolRequest as RequestType, ToolCard as ToolType } from '../lib/types';
 
-const MyRequests = ({ requests }: { requests: RequestType[] }) => {
+const SentRequests = ({ requests }: { requests: RequestType[] }) => {
   const [statusFilter, setStatusFilter] = useState<string>('pending');
   const [filteredRequests, setFilteredRequests] = useState<RequestType[]>([]);
   const [tools, setTools] = useState<Array<{ tool: ToolType; request: RequestType }>>([]);
 
   useEffect(() => {
-    if (Array.isArray(requests)) {
-      setFilteredRequests(requests.filter(request => request.status === statusFilter));
-    } else {
-      console.error('Requests is not an array:', requests);
-    }
+    setFilteredRequests(requests.filter(request => request.status === statusFilter));
   }, [statusFilter, requests]);
 
   useEffect(() => {
@@ -34,13 +28,13 @@ const MyRequests = ({ requests }: { requests: RequestType[] }) => {
     }
   }, [filteredRequests]);
 
-  const handleStatusChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setStatusFilter(event.target.value);
-  };
-
   const handleDelete = (requestId: string) => {
     setFilteredRequests(filteredRequests.filter(request => request.id !== requestId));
     setTools(tools.filter(({ request }) => request.id !== requestId));
+  };
+
+  const handleStatusChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setStatusFilter(event.target.value);
   };
 
   return (
@@ -68,4 +62,4 @@ const MyRequests = ({ requests }: { requests: RequestType[] }) => {
   );
 };
 
-export default MyRequests;
+export default SentRequests;
