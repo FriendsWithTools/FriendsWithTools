@@ -34,8 +34,8 @@ const RentRented = () => {
   const testUserId = process.env.HARDCODED_ID;
 
   useEffect(() => {
-    const ownerId = "process.env.CURRENT_USERID"; // Replace with the actual ownerId
-    const userId = "process.env.CURRENT_USERID"; // Replace with the actual userId
+    const ownerId = "ba6295e8-ceca-424b-a148-0467a19ab25f"; // Replace with the actual ownerId
+    const userId = "ba6295e8-ceca-424b-a148-0467a19ab25f"; // Replace with the actual userId
 
     if (activeComponent === 'toolsToRent') {
       fetchTools(ownerId).then(setTools);
